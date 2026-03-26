@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Corner | Fresh & Healthy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Juice<span>Corner</span></div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li id="auth-links"><a href="login.html">Login</a></li>
+                <li id="signup-link"><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Freshness in Every Sip</h1>
+            <p>Experience the finest natural juices made from handpicked ingredients.</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="recommendations">
+            <div class="section-title">
+                <h2>ML Recommendations</h2>
+                <p>Personalized selections just for you based on trending flavors</p>
+            </div>
+            <div id="recommendation-list" class="juice-grid">
+                <!-- Recommendations will be injected here -->
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="section-title">
+                <h2>Our Full Menu</h2>
+                <p>Choose from our wide variety of healthy options</p>
+            </div>
+            <div id="juice-list" class="juice-grid">
+                <!-- Juices will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Juice<span>Corner</span></div>
+            <p>&copy; 2026 Juice Corner. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Place Your Order</h2>
+                <p id="order-juice-name"></p>
+            </div>
+            <form id="order-form">
+                <input type="hidden" id="form-juice-name">
+                <input type="hidden" id="form-juice-price">
+                <div class="form-group">
+                    <label for="customerName">Name</label>
+                    <input type="text" id="customerName" required placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number</label>
+                    <input type="tel" id="customerPhone" required placeholder="Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Delivery Address</label>
+                    <textarea id="customerAddress" required placeholder="Your Full Address"></textarea>
+                </div>
+                <div class="order-summary">
+                    <p>Total: <span id="summary-price">$0.00</span></p>
+                </div>
+                <button type="submit" class="btn">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
